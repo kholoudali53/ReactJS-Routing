@@ -1,7 +1,7 @@
 import Navbar from "../commponents/Navbar"
 import {Outlet} from "react-router-dom"
 
-const LayoutPage = () => {
+const RootLayout = () => {
     return (
         <>
         <Navbar />  
@@ -10,5 +10,5 @@ const LayoutPage = () => {
     )
 }
 
-export default LayoutPage
+export default RootLayout
 

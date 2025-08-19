@@ -16,6 +16,12 @@ const Navbar = () => {
                 <li className="hover:text-[#149eca] duration-200">
                     <NavLink to="/learn">Learn</NavLink>
                 </li>
+                <li className="hover:text-[#149eca] duration-200">
+                    <NavLink to="/contribute">Contribute</NavLink>
+                </li>
+                <li className="hover:text-[#149eca] duration-200">
+                    <NavLink to="/login">Login</NavLink>
+                </li>
             </ul>
         </nav>
     )
