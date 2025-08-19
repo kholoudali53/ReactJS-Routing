@@ -3,10 +3,12 @@ import {Outlet} from "react-router-dom"
 
 const RootLayout = () => {
     return (
-        <>
-        <Navbar />  
-        <Outlet/>
-        </>
+        <div className="root-layout">
+        <Navbar />
+        <div className="container">
+         <Outlet />
+        </div>
+        </div>
     )
 }
 

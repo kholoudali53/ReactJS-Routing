@@ -11,6 +11,7 @@ import LoginPage from "../Pages/Login";
 import RootLayout from "../Pages/Layout";
 import ProtectedRoute from "../commponents/auth/ProtectedRoute";
 import ErrorHandler from "../commponents/errors/ErrorHandler";
+import PageNotFound from "../Pages/PageNotFound";
 
 const isLoggedIn = false;
 
@@ -19,6 +20,7 @@ const userData : {email: string} | null = isLoggedIn ? {email: "email@gmail.com"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
+      {/* Root Layout */}
 =    <Route path="/" element={<div> <RootLayout /> </div>} errorElement={<ErrorHandler/>}>
          <Route index element={<HomePage />}/>
         <Route path="contact" element={<ContactPage />}/>
@@ -27,11 +29,14 @@ const router = createBrowserRouter(
         <Route path="login" element={ <ProtectedRoute isAllowed= {!isLoggedIn} redirectPath="/contribute"> <LoginPage/> </ProtectedRoute>}/>
      </Route>
 
+     {/* Learn Layout */}
      <Route path="/learn" element={<LearnLayout/>}>
         <Route index element={<QuickStartPage/>}/>
         <Route path="thinking-in-react" element={<ThinkingInReactPage/>}/>
         <Route path="installation" element={<InstallationPage/>}/>
 
+        {/* Page Not Found */}
+        <Route path="*" element={<PageNotFound/>}/>
      </Route>
     </>
   )

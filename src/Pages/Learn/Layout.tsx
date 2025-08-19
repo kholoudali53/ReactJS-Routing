@@ -3,12 +3,15 @@ import Navbar from "../../commponents/Navbar"
 import {Outlet} from "react-router-dom"
 const LearnLayout = () => {
     return (
-        <>
-        <Navbar/>
-        <LearnAside/>
-        <Outlet/>
-        </>
-    )
+  <div className="learn-layout">
+    <LearnAside />
+
+    <div className="ml-72">
+      <Navbar />
+      <Outlet />
+    </div>
+  </div>
+);
 }
 
 export default LearnLayout
